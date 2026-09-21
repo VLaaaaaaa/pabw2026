@@ -107,6 +107,42 @@
 
         <section id="tambah-musik">
             <h2>Tambah Musik</h2>
+
+            <form action="/simpan" method="post">
+
+                <p>
+                    <label for="judul-lagu">Judul Lagu</label>
+                    <input
+                        type="text"
+                        id="judul-lagu"
+                        name="judul-lagu"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="artis">Artis</label>
+                    <input
+                        type="text"
+                        id="artis"
+                        name="artis"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="genre">Genre</label>
+                    <input
+                        type="text"
+                        id="genre"
+                        name="genre"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Simpan</button>
+
+            </form>
         </section>
 
     </main>
