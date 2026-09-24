@@ -10,7 +10,6 @@
   }
 }
 
-/* Pilihan manual: HARUS setelah blok media query agar menang */
 .pengalih-tema {
   position: absolute;
   opacity: 0;
