@@ -82,3 +82,10 @@ Website menyediakan dua cara untuk menggunakan tema gelap:
 
 1. Mengikuti pengaturan tema sistem menggunakan prefers-color-scheme: dark.
 2. Menggunakan toggle tema manual pada halaman.
+## Penggunaan AI
+
+AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
+- memahami instruksi worksheet;
+- membantu menemukan kesalahan dalam kode.
+
+Kode dan desain akhir disesuaikan dan diperiksa kembali oleh saya.
