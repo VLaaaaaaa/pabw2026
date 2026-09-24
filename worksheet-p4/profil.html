@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music yang Pernah Saya Dengar</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Music yang Pernah Saya Dengar</h1>
+
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li>
+                    <a href="#daftar-musik">Daftar Musik</a>
+                </li>
+                <li>
+                    <a href="#genre-musik">Genre Musik</a>
+                </li>
+                <li>
+                    <a href="#tambah-musik">Tambah Musik</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="daftar-musik">
+            <h2>Daftar Musik</h2>
+
+            <p id="genre-musik">
+                Berisi daftar musik yang pernah saya dengar
+                beserta informasi tentang lagu tersebut.
+            </p>
+
+            <table>
+                <caption>Daftar Musik yang Pernah Saya Dengar</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Judul Lagu</th>
+                        <th scope="col">Artis</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Tahun</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Cars Outside</td>
+                        <td>James Arthur</td>
+                        <td>Pop</td>
+                        <td>2019</td>
+                    </tr>
+
+                    <tr>
+                        <td>Photograph</td>
+                        <td>Ed Sheeran</td>
+                        <td>Pop</td>
+                        <td>2014</td>
+                    </tr>
+
+                    <tr>
+                        <td>Teh Hijau</td>
+                        <td>Efek Rumah Kaca</td>
+                        <td>Indie</td>
+                        <td>2007</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <figure>
+                <img
+                    src="musik.jpg"
+                    alt="Gambar musik yang pernah saya dengar"
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                >
+                <figcaption>
+                    Musik yang pernah saya dengar.
+                </figcaption>
+            </figure>
+
+
+            <figure>
+                <img
+                    src="musik2.jpg"
+                    alt="Gambar lain yang berkaitan dengan musik yang pernah saya dengar"
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                >
+                <figcaption>
+                    Koleksi musik yang saya dengarkan.
+                </figcaption>
+            </figure>
+
+        </section>
+
+
+        <section id="tambah-musik">
+            <h2>Tambah Musik</h2>
+
+            <form action="/simpan" method="post">
+
+                <p>
+                    <label for="judul-lagu">Judul Lagu</label>
+                    <input
+                        type="text"
+                        id="judul-lagu"
+                        name="judul-lagu"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="artis">Artis</label>
+                    <input
+                        type="text"
+                        id="artis"
+                        name="artis"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="genre">Genre</label>
+                    <input
+                        type="text"
+                        id="genre"
+                        name="genre"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Simpan</button>
+
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Hafla Aqly · 25523191 · 2026</p>
+    </footer>
+
+</body>
+
+</html>
