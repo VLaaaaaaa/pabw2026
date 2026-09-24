@@ -2,10 +2,8 @@
 <html lang="id">
 
 <head>
-   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Music yang Pernah Saya Dengar</title>
 
     <link rel="stylesheet" href="tokens.css">
@@ -18,21 +16,29 @@
 <body>
 
     <header>
-        <h1>Music yang Pernah Saya Dengar</h1>
+        <input type="checkbox" id="tema" class="pengalih-tema">
 
-        <nav aria-label="Navigasi utama">
-            <ul>
-                <li>
-                    <a href="#daftar-musik">Daftar Musik</a>
-                </li>
-                <li>
-                    <a href="#genre-musik">Genre Musik</a>
-                </li>
-                <li>
-                    <a href="#tambah-musik">Tambah Musik</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header-baris">
+            <h1>Music yang Pernah Saya Dengar</h1>
+
+            <div class="header-kanan">
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li>
+                            <a href="#daftar-musik">Daftar Musik</a>
+                        </li>
+                        <li>
+                            <a href="#genre-musik">Genre Musik</a>
+                        </li>
+                        <li>
+                            <a href="#tambah-musik">Tambah Musik</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <label for="tema" class="tombol-tema">Tema gelap</label>
+            </div>
+        </div>
     </header>
 
 
@@ -46,69 +52,74 @@
                 beserta informasi tentang lagu tersebut.
             </p>
 
-            <table>
-                <caption>Daftar Musik yang Pernah Saya Dengar</caption>
+            <div class="tabel-bungkus">
+                <table>
+                    <caption>Daftar Musik yang Pernah Saya Dengar</caption>
 
-                <thead>
-                    <tr>
-                        <th scope="col">Judul Lagu</th>
-                        <th scope="col">Artis</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Tahun</th>
-                    </tr>
-                </thead>
+                    <thead>
+                        <tr>
+                            <th scope="col">Judul Lagu</th>
+                            <th scope="col">Artis</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Tahun</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td>Cars Outside</td>
-                        <td>James Arthur</td>
-                        <td>Pop</td>
-                        <td>2019</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Car's Outside</td>
+                            <td>James Arthur</td>
+                            <td>Pop</td>
+                            <td>2019</td>
+                        </tr>
 
-                    <tr>
-                        <td>Photograph</td>
-                        <td>Ed Sheeran</td>
-                        <td>Pop</td>
-                        <td>2014</td>
-                    </tr>
+                        <tr>
+                            <td>Photograph</td>
+                            <td>Ed Sheeran</td>
+                            <td>Pop</td>
+                            <td>2014</td>
+                        </tr>
 
-                    <tr>
-                        <td>Teh Hijau</td>
-                        <td>Efek Rumah Kaca</td>
-                        <td>Indie</td>
-                        <td>2007</td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-            <figure>
-                <img
-                    src="musik.jpg"
-                    alt="Gambar musik yang pernah saya dengar"
-                    width="640"
-                    height="360"
-                    loading="lazy"
-                >
-                <figcaption>
-                    Musik yang pernah saya dengar.
-                </figcaption>
-            </figure>
+                        <tr>
+                            <td>Teh Hijau</td>
+                            <td>Tulus</td>
+                            <td>Pop</td>
+                            <td>2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
-            <figure>
-                <img
-                    src="musik2.jpg"
-                    alt="Gambar lain yang berkaitan dengan musik yang pernah saya dengar"
-                    width="640"
-                    height="360"
-                    loading="lazy"
-                >
-                <figcaption>
-                    Koleksi musik yang saya dengarkan.
-                </figcaption>
-            </figure>
+            <div class="katalog">
+
+                <figure class="kartu">
+                    <img
+                        src="cars-outside.jpg"
+                        alt="Tampilan pemutar musik yang memutar Car's Outside oleh James Arthur, dengan sampul album YOU"
+                        width="736"
+                        height="1196"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Car's Outside &ndash; James Arthur.
+                    </figcaption>
+                </figure>
+
+                <figure class="kartu">
+                    <img
+                        src="teh-hijau.jpg"
+                        alt="Tampilan pemutar musik yang memutar Teh Hijau oleh Tulus, dengan sampul hijau berisi siluet punggung seorang pria"
+                        width="736"
+                        height="1308"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        Teh Hijau &ndash; Tulus.
+                    </figcaption>
+                </figure>
+
+            </div>
 
         </section>
 
@@ -116,36 +127,42 @@
         <section id="tambah-musik">
             <h2>Tambah Musik</h2>
 
-            <form action="/simpan" method="post">
+            <form class="form kartu" action="/simpan" method="post">
 
-                <p>
+                <p class="form-kolom">
                     <label for="judul-lagu">Judul Lagu</label>
                     <input
                         type="text"
                         id="judul-lagu"
                         name="judul-lagu"
+                        aria-describedby="galat-judul"
                         required
                     >
+                    <span class="pesan-galat" id="galat-judul">Judul lagu wajib diisi.</span>
                 </p>
 
-                <p>
+                <p class="form-kolom">
                     <label for="artis">Artis</label>
                     <input
                         type="text"
                         id="artis"
                         name="artis"
+                        aria-describedby="galat-artis"
                         required
                     >
+                    <span class="pesan-galat" id="galat-artis">Nama artis wajib diisi.</span>
                 </p>
 
-                <p>
+                <p class="form-kolom">
                     <label for="genre">Genre</label>
                     <input
                         type="text"
                         id="genre"
                         name="genre"
+                        aria-describedby="galat-genre"
                         required
                     >
+                    <span class="pesan-galat" id="galat-genre">Genre wajib diisi.</span>
                 </p>
 
                 <button type="submit">Simpan</button>
