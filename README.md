@@ -94,23 +94,8 @@ Kode dan desain akhir disesuaikan dan diperiksa kembali oleh saya.
 
 Hafla Aqly, 25523191, SIF302
 
-Ini lanjutan halaman "Music yang Pernah Saya Dengar" dari P4. Isi, warna, dan token-nya tidak saya ubah. Yang saya ganti cuma cara halamannya disusun, dari yang tadinya mengalir biasa jadi pakai grid dan flex. Di HTML saya tambah satu pembungkus `.page` dan beberapa nama kelas.
-
-## Sketsa kerangka
-
-```
-+----------------------------------------------+
-| header (.navbar, flex)                       |  baris 1, auto
-| judul | menu | tombol tema                   |
-+---------------+------------------------------+
-| .sisi         | .utama                       |
-| 16rem         | 1fr                          |  baris 2, 1fr
-| form tambah   | tabel + galeri kartu         |
-| musik         |                              |
-+---------------+------------------------------+
-| footer                                       |  baris 3, auto
-+----------------------------------------------+
-```
+Ini lanjutan halaman "Music yang Pernah Saya Dengar" dari P4. Isi, warna, dan token-nya tidak saya ubah. Yang saya ganti cuma cara halamannya disusun, dari yang tadinya mengalir biasa jadi pakai grid dan flex. Di HTML saya tambah satu pembungkus .page
+ dan beberapa nama kelas.
 
 Jadi halamannya tiga baris (auto 1fr auto di .page), dan baris tengahnya dibagi dua kolom (16rem 1fr di .isi). Blok di baris tengah saya tempatkan pakai area bernama, sisi dan utama, supaya tidak perlu hitung nomor garis.
 
@@ -128,6 +113,4 @@ Kedua, sidebar 16rem di layar 360 px memakan hampir seluruh lebar, sisa ruang un
 
 Ketiga, tombol tema dari P4 tidak bisa balik ke terang kalau sistemnya sudah mode gelap. Sekarang tombolnya membalik pilihan sistem, jadi dari gelap bisa ke terang dan sebaliknya. Tulisannya saya ganti jadi "Ganti tema".
 
-## Berkas
 
-`profil.html`, `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`, dan dua gambar sampul.
