@@ -15,10 +15,12 @@
 
 <body>
 
+<div class="page">
+
     <header>
         <input type="checkbox" id="tema" class="pengalih-tema">
 
-        <div class="header-baris">
+        <div class="navbar">
             <h1>Music yang Pernah Saya Dengar</h1>
 
             <div class="header-kanan">
@@ -42,9 +44,9 @@
     </header>
 
 
-    <main>
+    <main class="isi">
 
-        <section id="daftar-musik">
+        <section id="daftar-musik" class="utama">
             <h2>Daftar Musik</h2>
 
             <p id="genre-musik">
@@ -91,7 +93,7 @@
             </div>
 
 
-            <div class="katalog">
+            <div class="galeri">
 
                 <figure class="kartu">
                     <img
@@ -101,8 +103,12 @@
                         height="1196"
                         loading="lazy"
                     >
-                    <figcaption>
-                        Car's Outside &ndash; James Arthur.
+                    <figcaption class="kartu__kaki">
+                        <span class="kartu__isi">
+                            <span class="kartu__judul">Car's Outside</span>
+                            James Arthur
+                        </span>
+                        <span class="lencana">Pop &middot; 2019</span>
                     </figcaption>
                 </figure>
 
@@ -114,8 +120,12 @@
                         height="1308"
                         loading="lazy"
                     >
-                    <figcaption>
-                        Teh Hijau &ndash; Tulus.
+                    <figcaption class="kartu__kaki">
+                        <span class="kartu__isi">
+                            <span class="kartu__judul">Teh Hijau</span>
+                            Tulus
+                        </span>
+                        <span class="lencana">Pop &middot; 2026</span>
                     </figcaption>
                 </figure>
 
@@ -124,7 +134,7 @@
         </section>
 
 
-        <section id="tambah-musik">
+        <section id="tambah-musik" class="sisi">
             <h2>Tambah Musik</h2>
 
             <form class="form kartu" action="/simpan" method="post">
@@ -176,6 +186,8 @@
     <footer>
         <p>Hafla Aqly · 25523191 · 2026</p>
     </footer>
+
+</div>
 
 </body>
 

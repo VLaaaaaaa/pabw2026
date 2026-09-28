@@ -25,21 +25,44 @@ th, td {
 
 th { color: var(--color-primary); }
 
-/* Gambar dalam kartu */
-figure.kartu {
-  display: flex;
-  flex-direction: column;
+.galeri .kartu {
+  display: grid;
+  align-content: start;
   gap: var(--space-2);
+  min-height: 14rem;
 }
 
 figure img {
   border-radius: var(--radius-md);
   max-height: 32rem;
-  object-fit: contain;      
-  margin-inline: auto;
+  object-fit: contain;
+  justify-self: center;
 }
 
 figcaption { font-size: var(--text-sm); }
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.kartu__isi { min-width: 0; }
+
+.kartu__judul {
+  display: block;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.lencana {
+  flex: none;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
 
 /* Form */
 .form {
@@ -104,7 +127,6 @@ input:user-invalid {
 
 .form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
 
-/* Tombol pengalih tema (kotak centang disembunyikan, label jadi tombol) */
 .tombol-tema {
   padding: var(--space-1) var(--space-3);
   border: 1px solid var(--color-border);

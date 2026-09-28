@@ -1,5 +1,17 @@
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(:has(#tema:checked)) {
+    --color-bg:      var(--gray-950);
+    --color-fg:      var(--gray-100);
+    --color-surface: var(--gray-800);
+    --color-border:  var(--gray-600);
+    --color-primary: var(--plum-300);
+    --color-danger:  var(--red-300);
+    --shadow-card:   var(--shadow-1-dark);
+  }
+}
+
+@media not (prefers-color-scheme: dark) {
+  :root:has(#tema:checked) {
     --color-bg:      var(--gray-950);
     --color-fg:      var(--gray-100);
     --color-surface: var(--gray-800);
@@ -14,14 +26,4 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-:root:has(#tema:checked) {
-  --color-bg:      var(--gray-950);
-  --color-fg:      var(--gray-100);
-  --color-surface: var(--gray-800);
-  --color-border:  var(--gray-600);
-  --color-primary: var(--plum-300);
-  --color-danger:  var(--red-300);
-  --shadow-card:   var(--shadow-1-dark);
 }

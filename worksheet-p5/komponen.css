@@ -1,0 +1,147 @@
+.tabel-bungkus {
+  overflow-x: auto;              
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  text-align: left;
+}
+
+th, td {
+  padding: var(--space-2) var(--space-4);
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+}
+
+th { color: var(--color-primary); }
+
+.galeri .kartu {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  min-height: 14rem;
+}
+
+figure img {
+  border-radius: var(--radius-md);
+  max-height: 32rem;
+  object-fit: contain;
+  justify-self: center;
+}
+
+figcaption { font-size: var(--text-sm); }
+
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.kartu__isi { min-width: 0; }
+
+.kartu__judul {
+  display: block;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.lencana {
+  flex: none;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 32rem;
+}
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input, select, textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  align-self: flex-start;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.1); }
+
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}
+
+.pesan-galat::before { content: "\26A0\FE0F  "; }
+
+.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
+
+.tombol-tema {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-fg);
+  cursor: pointer;
+}
+
+:root:has(#tema:focus-visible) .tombol-tema {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+:root:has(#tema:checked) .tombol-tema {
+  border-color: var(--color-primary);
+  font-weight: 700;
+}

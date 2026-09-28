@@ -1,19 +1,37 @@
-body {
-  max-width: 64rem;
-  margin-inline: auto;
+html {
+  display: grid;
+  justify-items: center;
 }
 
+body {
+  width: min(100%, 64rem);
+  padding-block: 0;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+/* Baris 1: kepala halaman */
 header {
   padding-block: var(--space-4);
   border-bottom: 1px solid var(--color-border);
 }
 
-.header-baris {
+.navbar {
   display: flex;
+  gap: var(--space-4);
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
   flex-wrap: wrap;
+}
+
+.navbar > h1 {
+  flex: 1 1 20rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .header-kanan {
@@ -39,26 +57,44 @@ nav a {
 nav a:hover { text-decoration: underline; }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-gap);
   padding-block: var(--space-6);
 }
 
-main > section {
+.isi {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-areas: "sisi utama";
+  gap: var(--space-6);
+  align-content: start;
+}
+
+.sisi  { grid-area: sisi; align-self: start; }
+.utama { grid-area: utama; min-width: 0; }
+
+.sisi,
+.utama {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
 
-.katalog {
-  display: flex;
-  flex-wrap: wrap;
+@media (max-width: 48rem) {
+  .isi {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "utama"
+      "sisi";
+  }
+}
+
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: var(--space-4);
 }
 
 .kartu {
-  flex: 1 1 16rem;
+  min-width: 0;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -67,7 +103,6 @@ main > section {
 }
 
 footer {
-  margin-top: var(--space-6);
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   color: var(--color-fg);
