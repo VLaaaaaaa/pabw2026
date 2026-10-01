@@ -14,7 +14,7 @@ body {
   min-height: 100dvh;
 }
 
-/* Baris 1: kepala halaman */
+
 header {
   padding-block: var(--space-4);
   border-bottom: 1px solid var(--color-border);

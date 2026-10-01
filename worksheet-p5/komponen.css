@@ -64,7 +64,7 @@ figcaption { font-size: var(--text-sm); }
   white-space: nowrap;
 }
 
-/* Form */
+
 .form {
   display: flex;
   flex-direction: column;
