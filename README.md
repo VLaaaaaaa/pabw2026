@@ -113,4 +113,38 @@ Kedua, sidebar 16rem di layar 360 px memakan hampir seluruh lebar, sisa ruang un
 
 Ketiga, tombol tema dari P4 tidak bisa balik ke terang kalau sistemnya sudah mode gelap. Sekarang tombolnya membalik pilihan sistem, jadi dari gelap bisa ke terang dan sebaliknya. Tulisannya saya ganti jadi "Ganti tema".
 
+## Pertemuan 8 — JavaScript Modern ES6+, Struktur Data, dan Array Methods
+
+Pertemuan 8 melanjutkan website musik dari P5. Jalankan `worksheet-p8/profil.html`
+menggunakan Live Server agar modul JavaScript dan file CSS/gambar dimuat dari
+folder project yang sama.
+
+- Data profil disimpan dalam object `profil`, sedangkan musik disimpan dalam
+  array of object `daftarLagu`.
+- `const` digunakan untuk data dan referensi yang tidak ditunjuk ulang. `let`
+  digunakan untuk hasil perhitungan yang nilainya diperbarui.
+- Template literal digunakan untuk menyusun teks perkenalan, keterangan lagu,
+  pesan status, dan footer.
+- Nullish coalescing (`??`) menyediakan nilai bawaan, sedangkan optional
+  chaining (`?.`) mengakses informasi sampul yang mungkin belum tersedia.
+- `buatPerkenalan` dan `formatKeahlian` adalah pure function: keduanya hanya
+  menggunakan argumen dan mengembalikan hasil tanpa mengubah data luar.
+- `map()` mengambil judul lagu, `filter()` menyaring lagu bergenre Pop, dan
+  `find()` mencari satu lagu berdasarkan judul.
+- Spread operator membuat salinan object profil dan array musik. Lagu diurutkan
+  pada salinan, lalu data awal diperiksa untuk memastikan tidak berubah.
+- Tabel, jumlah lagu, dan galeri dibuat dari data JavaScript. Form menambahkan
+  data baru ke array dan memperbarui tampilan.
+- Contoh debugging di Console memperlihatkan property yang tidak tersedia
+  (`undefined`), pemeriksaan hasil `querySelector` sebelum menggunakan elemen,
+  dan konversi nilai input string menjadi number.
+
+### Pernyataan penggunaan AI
+
+AI membantu memindahkan implementasi JavaScript ke modul, menyusun contoh
+object/array, pure function, array methods, dan pemeriksaan debugging. Topik,
+identitas, dan data lagu mengikuti project P5. Sebelum mengumpulkan, saya perlu
+membaca dan memahami setiap bagian kode serta memeriksa sendiri hasilnya di
+Console; catatan ini harus disesuaikan bila ada bagian yang saya ubah atau
+kerjakan sendiri.
 
