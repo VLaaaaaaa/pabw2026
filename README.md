@@ -148,3 +148,11 @@ membaca dan memahami setiap bagian kode serta memeriksa sendiri hasilnya di
 Console; catatan ini harus disesuaikan bila ada bagian yang saya ubah atau
 kerjakan sendiri.
 
+## worksheet 9
+## Deskripsi
+Website sederhana untuk menampilkan koleksimusic favorit, menyaring berdasarkan kategori, dan memvalidasi formulir menggunakan JavaScript DOM.
+
+## Penggunaan AI
+AI digunakan sebagai bantuan untuk memahami konsep JavaScript DOM, event delegation, rendering daftar, dan validasi formulir, serta untuk membantu menemukan kesalahan kode.
+
+Saya menguji halaman melalui browser dan menyesuaikan kode dengan proyek saya sendiri.
