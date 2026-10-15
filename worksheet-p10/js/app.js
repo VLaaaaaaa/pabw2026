@@ -18,6 +18,16 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
 
+
+const badan = JSON.stringify({
+    judul: "Judul contoh",
+    kategori: "web"
+});
+
+console.log(typeof badan); // string
+console.log(badan);
+
+
 async function mulaiAplikasi() {
     tampilkanStatusData("Sedang memuat data...");
 
@@ -28,7 +38,18 @@ async function mulaiAplikasi() {
             throw new Error("Format data harus berupa larik.");
         }
 
+        
+        if (data.length > 0) {
+            console.log(data[0].judul);
+        }
+
+        // C.2: Memeriksa bentuk data
+        console.log("Data berupa larik:", Array.isArray(data));
+        console.log("Jumlah data:", data.length);
+        console.log("Data lengkap:", data);
+
         aturDaftarLagu(data);
+
         tampilkanStatusData(
             data.length === 0
                 ? "Data berhasil dimuat, tetapi belum ada lagu."
@@ -36,9 +57,7 @@ async function mulaiAplikasi() {
         );
     } catch (galat) {
         console.error("Gagal menjalankan aplikasi:", galat.message);
-        tampilkanStatusData(
-            `Gagal memuat data: ${galat.message}`
-        );
+        tampilkanStatusData(`Gagal memuat data: ${galat.message}`);
     }
 }
 
