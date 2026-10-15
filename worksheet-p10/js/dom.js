@@ -19,6 +19,7 @@ const jumlah = ambilElemen("#jumlah-lagu");
 
 const barisFilter = ambilElemen("#filter");
 const kosong = ambilElemen("#pesan-kosong");
+const muat = ambilElemen("#muat");
 const form = ambilElemen("#form-musik");
 const tombolSimpan = ambilElemen(
     '#form-musik button[type="submit"]'
@@ -32,8 +33,12 @@ export function aturDaftarLagu(data) {
     render(saring());
 }
 
-export function tampilkanStatusData(pesan) {
+export function tampilkanGalat(pesan) {
     jumlah.textContent = pesan;
+}
+
+export function aturMemuat(sedangMemuat) {
+    muat.hidden = !sedangMemuat;
 }
 
 function buatSel(teks) {
@@ -97,12 +102,13 @@ function buatKartu(lagu) {
     return kartu;
 }
 
-function render(daftar) {
+export function render(daftar) {
     wadah.textContent = "";
     galeri.textContent = "";
 
     if (daftar.length === 0) {
         jumlah.textContent = "0 lagu ditampilkan.";
+        kosong.textContent = "Belum ada lagu.";
         kosong.hidden = false;
         return;
     }
@@ -188,7 +194,7 @@ function cariPesanGalat(kolom) {
     return "";
 }
 
-function tampilkanGalat(kolom) {
+function tampilkanGalatKolom(kolom) {
     const idPesan = kolom.getAttribute("aria-describedby");
     const elemenPesan = idPesan
         ? document.getElementById(idPesan)
@@ -220,7 +226,7 @@ form.addEventListener("input", (event) => {
         return;
     }
 
-    tampilkanGalat(event.target);
+    tampilkanGalatKolom(event.target);
     tombolSimpan.disabled = !formSah();
     statusTambah.textContent = "";
 });
@@ -229,7 +235,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const kolomBermasalah = kolomForm.filter(
-        (kolom) => !tampilkanGalat(kolom)
+        (kolom) => !tampilkanGalatKolom(kolom)
     );
 
     tombolSimpan.disabled = kolomBermasalah.length > 0;

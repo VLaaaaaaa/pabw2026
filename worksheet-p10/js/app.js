@@ -1,6 +1,6 @@
 
 import { ambilProyek } from "./api.js";
-import { aturDaftarLagu, tampilkanStatusData } from "./dom.js";
+import { aturDaftarLagu, tampilkanGalat, aturMemuat } from "./dom.js";
 
 export const profil = {
     nama: "Hafla Aqly",
@@ -24,12 +24,12 @@ const badan = JSON.stringify({
     kategori: "web"
 });
 
-console.log(typeof badan); // string
+console.log(typeof badan); 
 console.log(badan);
 
 
 async function mulaiAplikasi() {
-    tampilkanStatusData("Sedang memuat data...");
+    aturMemuat(true);
 
     try {
         const data = await ambilProyek();
@@ -43,21 +43,17 @@ async function mulaiAplikasi() {
             console.log(data[0].judul);
         }
 
-        // C.2: Memeriksa bentuk data
+        
         console.log("Data berupa larik:", Array.isArray(data));
         console.log("Jumlah data:", data.length);
         console.log("Data lengkap:", data);
 
-        aturDaftarLagu(data);
-
-        tampilkanStatusData(
-            data.length === 0
-                ? "Data berhasil dimuat, tetapi belum ada lagu."
-                : `Berhasil memuat ${data.length} lagu.`
-        );
+        aturDaftarLagu(data); 
     } catch (galat) {
-        console.error("Gagal menjalankan aplikasi:", galat.message);
-        tampilkanStatusData(`Gagal memuat data: ${galat.message}`);
+        tampilkanGalat("Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.");
+        console.error(galat.message); 
+    } finally {
+        aturMemuat(false);
     }
 }
 

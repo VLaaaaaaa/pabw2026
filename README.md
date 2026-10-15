@@ -156,3 +156,8 @@ Website sederhana untuk menampilkan koleksimusic favorit, menyaring berdasarkan 
 AI digunakan sebagai bantuan untuk memahami konsep JavaScript DOM, event delegation, rendering daftar, dan validasi formulir, serta untuk membantu menemukan kesalahan kode.
 
 Saya menguji halaman melalui browser dan menyesuaikan kode dengan proyek saya sendiri.
+
+# Pertemuan 10: JavaScript Asinkron (fetch, Promise, JSON)
+AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
+- memahami instruksi worksheet;
+- membantu menemukan kesalahan dalam kode.
