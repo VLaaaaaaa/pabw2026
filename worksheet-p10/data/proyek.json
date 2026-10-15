@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "judul": "Car's Outside",
+        "artis": "James Arthur",
+        "genre": "Pop",
+        "tahun": 2019,
+        "sampul": {
+            "src": "cars-outside.jpg",
+            "alt": "Tampilan pemutar musik yang memutar Car's Outside oleh James Arthur, dengan sampul album YOU",
+            "tinggi": 1196
+        }
+    },
+    {
+        "id": 2,
+        "judul": "Photograph",
+        "artis": "Ed Sheeran",
+        "genre": "Pop",
+        "tahun": 2014
+    },
+    {
+        "id": 3,
+        "judul": "Teh Hijau",
+        "artis": "Tulus",
+        "genre": "Pop",
+        "tahun": 2026,
+        "sampul": {
+            "src": "teh-hijau.jpg",
+            "alt": "Tampilan pemutar musik yang memutar Teh Hijau oleh Tulus, dengan sampul hijau berisi siluet punggung seorang pria",
+            "tinggi": 1308
+        }
+    }
+]
