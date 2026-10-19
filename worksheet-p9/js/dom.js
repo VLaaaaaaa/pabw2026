@@ -1,6 +1,6 @@
 import { daftarLagu, profil } from "./app.js";
 
-// Lembar A: memilih elemen halaman
+
 function ambilElemen(selector) {
     const elemen = document.querySelector(selector);
     if (elemen === null) {
@@ -22,7 +22,7 @@ const kolomForm = Array.from(form.querySelectorAll("input"));
 
 footerProfil.textContent = `${profil.nama} · ${profil.nim} · 2026`;
 
-// Lembar B: menyusun elemen dari data
+
 function buatSel(teks) {
     const sel = document.createElement("td");
     sel.textContent = teks;
@@ -76,19 +76,19 @@ function buatKartu(lagu) {
     return kartu;
 }
 
-// Lembar D: satu fungsi render untuk satu bagian halaman
+
 function render(daftar) {
-    wadah.textContent = "";                 // 1. kosongkan lebih dulu
+    wadah.textContent = "";                 
     galeri.textContent = "";
     jumlah.textContent = `${daftar.length} lagu ditampilkan.`;
 
-    if (daftar.length === 0) {              // 2. periksa keadaan kosong
+    if (daftar.length === 0) {              
         kosong.hidden = false;
         return;
     }
     kosong.hidden = true;
 
-    const barisLagu = document.createDocumentFragment();   // 3. isi ulang
+    const barisLagu = document.createDocumentFragment();   
     const kartuLagu = document.createDocumentFragment();
 
     daftar.forEach((lagu) => {
@@ -104,7 +104,7 @@ function render(daftar) {
     galeri.append(kartuLagu);
 }
 
-// Lembar C: satu pendengar di induk untuk semua tombol filter
+
 let kategoriAktif = "semua";
 
 function saring() {

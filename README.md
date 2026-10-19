@@ -141,19 +141,18 @@ folder project yang sama.
 
 ### Pernyataan penggunaan AI
 
-AI membantu memindahkan implementasi JavaScript ke modul, menyusun contoh
-object/array, pure function, array methods, dan pemeriksaan debugging. Topik,
-identitas, dan data lagu mengikuti project P5. Sebelum mengumpulkan, saya perlu
-membaca dan memahami setiap bagian kode serta memeriksa sendiri hasilnya di
-Console; catatan ini harus disesuaikan bila ada bagian yang saya ubah atau
-kerjakan sendiri.
+AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
+- memahami instruksi worksheet;
+- membantu menemukan kesalahan dalam kode.
 
 ## worksheet 9
 ## Deskripsi
 Website sederhana untuk menampilkan koleksimusic favorit, menyaring berdasarkan kategori, dan memvalidasi formulir menggunakan JavaScript DOM.
 
 ## Penggunaan AI
-AI digunakan sebagai bantuan untuk memahami konsep JavaScript DOM, event delegation, rendering daftar, dan validasi formulir, serta untuk membantu menemukan kesalahan kode.
+AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
+- memahami instruksi worksheet;
+- membantu menemukan kesalahan dalam kode.
 
 Saya menguji halaman melalui browser dan menyesuaikan kode dengan proyek saya sendiri.
 
@@ -161,3 +160,24 @@ Saya menguji halaman melalui browser dan menyesuaikan kode dengan proyek saya se
 AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
 - memahami instruksi worksheet;
 - membantu menemukan kesalahan dalam kode.
+
+# Pertemuan 11 — Modul, State, dan Penyimpanan Klien
+
+Halaman "Music yang Pernah Saya Dengar" (Hafla Aqly, 25523191, kelas D).
+Jalankan lewat server lokal (module dan fetch tidak jalan dari file://), lalu buka `profil.html`.
+
+## Susunan modul
+
+| Berkas | Tanggung jawab |
+| --- | --- |
+| `js/data.js` | Objek profil dan fungsi murni (`buatPerkenalan`, `formatKeahlian`, `saring`) |
+| `js/state.js` | Objek `state` tunggal, fungsi pengubah, dan simpan/muat `localStorage` |
+| `js/dom.js` | Seluruh sentuhan ke halaman: pemilih, `render(state)`, validasi kolom form |
+| `js/events.js` | Pemasangan seluruh pendengar peristiwa |
+| `js/app.js` | Perakit: mengimpor semuanya dan menjalankan `mulai()` |
+| `js/api.js` | Dari P10 (`ambilProyek`), dipakai apa adanya |
+
+## Penggunaan AI
+AI digunakan sebagai alat bantu dalam proses pengerjaan, terutama untuk:
+- memahami instruksi worksheet;
+- membantu menemukan kesalahan dalam kode

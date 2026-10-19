@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music yang Pernah Saya Dengar</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <input type="checkbox" id="tema" class="pengalih-tema">
+
+        <div class="navbar">
+            <h1>Music yang Pernah Saya Dengar</h1>
+
+            <div class="header-kanan">
+                <nav aria-label="Navigasi utama">
+                    <ul>
+                        <li>
+                            <a href="#daftar-musik">Daftar Musik</a>
+                        </li>
+                        <li>
+                            <a href="#genre-musik">Genre Musik</a>
+                        </li>
+                        <li>
+                            <a href="#tambah-musik">Tambah Musik</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <label for="tema" class="tombol-tema">Tema gelap</label>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="isi">
+
+        <section id="daftar-musik" class="utama">
+            <h2>Daftar Musik</h2>
+
+            <p id="genre-musik">
+                Berisi daftar musik yang pernah saya dengar
+                beserta informasi tentang lagu tersebut.
+            </p>
+
+            <div id="filter" class="filter" role="group" aria-label="Filter genre">
+                <button type="button" class="aktif" data-kategori="semua">Semua</button>
+                <button type="button" data-kategori="pop">Pop</button>
+                <button type="button" data-kategori="rock">Rock</button>
+            </div>
+
+            <button type="button" id="atur-ulang">Atur ulang</button>
+
+            <div class="tabel-bungkus">
+                <table>
+                    <caption>Daftar Musik yang Pernah Saya Dengar</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Judul Lagu</th>
+                            <th scope="col">Artis</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Tahun</th>
+                            <th scope="col">Favorit</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftar-lagu"></tbody>
+                </table>
+            </div>
+
+            <p id="pesan-kosong" hidden>
+                Belum ada lagu pada genre ini. Pilih genre lain atau tambahkan lagu lewat form.
+             </p>
+
+        <!-- baru hari ini -->
+        <p id="muat" hidden>Memuat data...</p>
+
+            <p id="jumlah-lagu" aria-live="polite"></p>
+            <div class="galeri" id="galeri-musik"></div>
+
+        </section>
+
+
+        <section id="tambah-musik" class="sisi">
+            <h2>Tambah Musik</h2>
+
+            <form class="form kartu" id="form-musik" novalidate>
+
+                <p class="form-kolom">
+                    <label for="judul-lagu">Judul Lagu</label>
+                    <input
+                        type="text"
+                        id="judul-lagu"
+                        name="judul-lagu"
+                        aria-describedby="galat-judul"
+                        required
+                    >
+                    <span class="pesan-galat" id="galat-judul">Judul lagu wajib diisi.</span>
+                </p>
+
+                <p class="form-kolom">
+                    <label for="artis">Artis</label>
+                    <input
+                        type="text"
+                        id="artis"
+                        name="artis"
+                        aria-describedby="galat-artis"
+                        required
+                    >
+                    <span class="pesan-galat" id="galat-artis">Nama artis wajib diisi.</span>
+                </p>
+
+                <p class="form-kolom">
+                    <label for="genre">Genre</label>
+                    <input
+                        type="text"
+                        id="genre"
+                        name="genre"
+                        aria-describedby="galat-genre"
+                        required
+                    >
+                    <span class="pesan-galat" id="galat-genre">Genre wajib diisi.</span>
+                </p>
+
+                <p class="form-kolom">
+                    <label for="tahun">Tahun</label>
+                    <input
+                        type="number"
+                        id="tahun"
+                        name="tahun"
+                        min="1900"
+                        max="2100"
+                        aria-describedby="galat-tahun"
+                        required
+                    >
+                    <span class="pesan-galat" id="galat-tahun">Masukkan tahun antara 1900 dan 2100.</span>
+                </p>
+
+                <button type="submit">Simpan</button>
+                <p id="status-tambah" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p id="profil-footer"></p>
+    </footer>
+
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+
+</html>
